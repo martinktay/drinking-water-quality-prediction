@@ -208,34 +208,55 @@ Performed grid search with cross-validation for each model:
 
 The Streamlit dashboard provides an intuitive interface for water quality analysis:
 
-1. **Data Overview**
+1. **Data Overview and Feature Descriptions**
+   ![Data Overview](docs/images/data-description1.JPG)
 
-   - Comprehensive parameter descriptions
-   - Safe ranges and classifications
-   - Interactive visualisations
+   - Comprehensive parameter descriptions for 15 water quality indicators
+   - Safe ranges and WHO guidelines for each parameter
+   - Clear categorisation of minerals, contaminants, and physical properties
 
 2. **Statistical Analysis**
+   ![Basic Statistics](docs/images/data-description2.JPG)
 
-   - Detailed statistics for all 15 parameters
-   - 3.9M+ water samples analysed
-   - Key metrics and distributions
+   - Detailed statistics for all 15 parameters across 3.9M+ samples
+   - Key metrics including mean, standard deviation, quartiles
+   - Min/max values and distribution analysis
+   - Count: 3,981,800 water samples analysed
 
-3. **Quality Distribution**
+3. **Water Quality Distribution**
+   ![Quality Distribution](docs/images/data-description3.JPG)
 
-   - Visual representation of water safety
-   - 69.7% unsafe vs 30.3% safe samples
-   - Interactive filtering options
+   - Clear visualisation of overall water safety
+   - 69.7% samples classified as unsafe
+   - 30.3% samples classified as safe
+   - Interactive pie chart representation
 
-4. **Model Performance**
+4. **Initial Model Performance**
+   ![Initial Performance](docs/images/data-description4.JPG)
 
-   - Initial and tuned metrics comparison
-   - Real-time model evaluation
-   - Performance visualisations
+   - Baseline performance metrics for all models
+   - Comparative analysis of accuracy, precision, recall, and F1 scores
+   - RandomForest showing strongest initial performance
+   - Performance visualisation through bar charts
 
-5. **Prediction Interface**
-   - Adjustable sliders for all parameters
-   - Real-time multi-model predictions
-   - Confidence scores and consensus results
+5. **Tuned Model Performance**
+   ![Tuned Performance](docs/images/data-description5.JPG)
+
+   - Enhanced metrics after hyperparameter optimisation
+   - RandomForest achieving best F1 score of 0.8176
+   - Improved performance across all models
+   - Side-by-side comparison with initial metrics
+
+6. **Interactive Prediction Interface**
+   ![Prediction Interface](docs/images/data-description6.JPG)
+   - Real-time water quality prediction
+   - Adjustable sliders for all 15 parameters
+   - Multi-model consensus predictions
+   - Confidence scores for each model
+   - Clear safe/unsafe indicators with confidence levels
+   - Model-specific predictions and explanations
+
+The dashboard is accessible at `http://localhost:8501` after starting the application.
 
 ## Project Structure
 
