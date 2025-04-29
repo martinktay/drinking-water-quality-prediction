@@ -15,6 +15,92 @@ Our system has been trained on nearly 4 million water samples, achieving an impr
 - **Real-time Monitoring**: Continuous water quality assessment for treatment facilities
 - **Accessibility**: Makes water quality testing more accessible to smaller communities
 
+## Technical Implementation
+
+### Model Architecture
+
+1. **Random Forest Classifier**
+
+   - Configuration: 100 estimators, max depth 10
+   - Optimized for handling non-linear parameter interactions
+   - Parallel processing enabled (n_jobs=-1)
+   - Best performer with 87.64% accuracy on unseen data
+
+2. **XGBoost Classifier**
+
+   - Parameters: 100 trees, max depth 6, learning rate 0.1
+   - Gradient boosting implementation
+   - Early stopping to prevent overfitting
+   - Second-best performer with 86.40% accuracy
+
+3. **LightGBM Classifier**
+
+   - Configuration: 100 estimators, max depth 6
+   - Gradient-based one-side sampling
+   - Leaf-wise tree growth strategy
+   - Achieved 86.05% accuracy
+
+4. **Decision Tree Classifier**
+
+   - Simple interpretable model
+   - Max depth: 6 for preventing overfitting
+   - Used for baseline comparisons
+   - 80.09% accuracy with high interpretability
+
+5. **Linear SVC**
+   - Linear kernel implementation
+   - Max iterations: 2000
+   - Used for linear boundary analysis
+   - Baseline performance: 77.40% accuracy
+
+### Data Pipeline
+
+1. **Preprocessing**
+
+   ```python
+   preprocessor = ColumnTransformer([
+       ('num', StandardScaler(), numerical_features)
+   ])
+   ```
+
+2. **Model Pipeline**
+
+   ```python
+   pipeline = Pipeline([
+       ('preprocessor', preprocessor),
+       ('clf', model)
+   ])
+   ```
+
+3. **Cross-Validation**
+   - 5-fold stratified cross-validation
+   - Metrics: accuracy, precision, recall, F1-score
+   - Independent test set for final evaluation
+
+### Hyperparameter Optimization
+
+Performed grid search with cross-validation for each model:
+
+1. **Random Forest**
+
+   - n_estimators: [100, 200]
+   - max_depth: [10, 20]
+   - min_samples_split: [2, 5]
+   - min_samples_leaf: [1, 2]
+
+2. **XGBoost**
+
+   - n_estimators: [100, 200]
+   - max_depth: [6, 8]
+   - learning_rate: [0.01, 0.1]
+   - min_child_weight: [1, 3]
+
+3. **LightGBM**
+   - n_estimators: [100, 200]
+   - max_depth: [6, 8]
+   - learning_rate: [0.01, 0.1]
+   - num_leaves: [31, 50]
+
 ## Data Preprocessing Stages
 
 We've implemented a robust data preprocessing pipeline to ensure reliable predictions:
