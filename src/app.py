@@ -44,38 +44,39 @@ if startup_warnings:
 st.markdown("""
     <style>
     .main-header {
-        font-size: 3rem;
+        font-size: 3.5rem;
         color: #ffffff;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         text-align: center;
     }
     .section-header {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         color: #ffffff;
-        margin: 1.5rem 0;
+        margin: 2rem 0;
     }
     .metric-card {
         background-color: #2c3e50;
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        margin: 1rem 0;
+        margin: 1.5rem 0;
     }
     .metric-value {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: bold;
         color: #ffffff;
     }
     .metric-label {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #bdc3c7;
     }
     .best-model {
         background-color: #28a745;
         color: white;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 5px;
-        margin: 1rem 0;
+        margin: 1.5rem 0;
+        font-size: 1.4rem;
     }
     .stApp {
         background-color: #1a1a1a;
@@ -83,9 +84,46 @@ st.markdown("""
     .stDataFrame {
         background-color: #2c3e50;
         color: #ffffff;
+        font-size: 1.2rem;
     }
     .stMarkdown {
         color: #ffffff;
+        font-size: 1.4rem;
+    }
+    /* Increase font size for all text elements */
+    p, div {
+        font-size: 1.2rem !important;
+    }
+    /* Make input labels larger */
+    .st-bw {
+        font-size: 1.3rem !important;
+    }
+    /* Increase size of number inputs */
+    .stNumberInput [data-baseweb="input"] {
+        font-size: 1.3rem !important;
+    }
+    /* Make buttons larger */
+    .stButton button {
+        font-size: 1.4rem !important;
+        padding: 0.8rem 1.6rem !important;
+    }
+    /* Increase size of help text */
+    .stTooltipIcon {
+        font-size: 1.2rem !important;
+    }
+    /* Make headers in markdown larger */
+    h1 {
+        font-size: 3rem !important;
+    }
+    h2 {
+        font-size: 2.5rem !important;
+    }
+    h3 {
+        font-size: 2rem !important;
+    }
+    /* Increase size of plot labels and titles */
+    .js-plotly-plot .plotly .main-svg text {
+        font-size: 1.4rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
