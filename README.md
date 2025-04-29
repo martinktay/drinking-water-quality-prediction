@@ -1,16 +1,82 @@
 # Drinking Water Quality Prediction
 
-A machine learning system that predicts drinking water quality based on chemical and physical parameters. The system uses multiple ML models to analyze water quality indicators and determine if water is safe for consumption.
+A machine learning system that predicts drinking water quality based on chemical and physical parameters. The system uses multiple ML models to analyse water quality indicators and determine if water is safe for consumption.
 
 ## Features
 
 - Multiple ML models (Random Forest, XGBoost, LightGBM, Decision Tree, Linear SVC)
 - Interactive web interface for predictions
 - Real-time model training and evaluation
-- Comprehensive data visualization
+- Comprehensive data visualisation
 - Robust data validation and preprocessing
 - Automated testing and CI/CD pipeline
 - Comprehensive documentation
+
+## Dashboard Overview
+
+The Streamlit dashboard provides an intuitive interface for water quality analysis and prediction:
+
+### 1. Data Overview and Feature Descriptions
+
+![Data Overview](docs/images/data-description1.JPG)
+The dashboard presents comprehensive information about water quality parameters:
+
+- pH levels (0-14) measuring acidity/alkalinity
+- Essential minerals (Iron, Zinc, Copper)
+- Contaminants (Lead, Nitrate)
+- Physical properties (Turbidity, Conductivity)
+- Each parameter includes safe ranges and classification
+
+### 2. Statistical Analysis
+
+![Basic Statistics](docs/images/data-description2.JPG)
+Detailed statistical breakdown of the dataset:
+
+- Comprehensive statistics for all 15 parameters
+- Count: 3981800 water samples analysed
+- Key metrics: mean, standard deviation, quartiles
+- Range values showing parameter distributions
+
+### 3. Water Quality Distribution
+
+![Quality Distribution](docs/images/data-description3.JPG)
+Overall water safety analysis:
+
+- Pie chart visualisation of water quality
+- 69.7% samples classified as unsafe
+- 30.3% samples classified as safe
+- Clear visual representation of quality distribution
+
+### 4. Initial Model Performance
+
+![Initial Performance](docs/images/data-description4.JPG)
+Baseline performance metrics for all models:
+
+- Accuracy, precision, recall, and F1 scores
+- RandomForest showing strongest initial performance
+- Comparative analysis across all five models
+- Bar chart visualisation of metrics
+
+### 5. Tuned Model Performance
+
+![Tuned Performance](docs/images/data-description5.JPG)
+Enhanced model performance after optimisation:
+
+- RandomForest achieving best F1 score of 0.8176
+- Improved metrics across all models
+- Detailed performance comparison
+- Clear visualisation of improvements
+
+### 6. Interactive Prediction Interface
+
+![Prediction Interface](docs/images/data-description6.JPG)
+User-friendly prediction system:
+
+- Adjustable sliders for all 15 parameters
+- Real-time predictions from all models
+- Confidence scores for each prediction
+- Clear safe/unsafe indicators
+- Multi-model consensus for reliable results
 
 ## Project Structure
 
