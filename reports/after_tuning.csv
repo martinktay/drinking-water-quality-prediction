@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1_Score
+RandomForest,0.85,0.84,0.86,0.85
+XGBoost,0.87,0.86,0.88,0.87
+LightGBM,0.86,0.85,0.87,0.86
+DecisionTree,0.82,0.81,0.83,0.82
+LinearSVC,0.83,0.82,0.84,0.83 

@@ -1,0 +1,46 @@
+models:
+  RandomForest:
+    path: models/randomforest.pkl
+    type: RandomForestClassifier
+  XGBoost:
+    path: models/xgboost.pkl
+    type: XGBClassifier
+  LightGBM:
+    path: models/lightgbm.pkl
+    type: LGBMClassifier
+  DecisionTree:
+    path: models/decisiontree.pkl
+    type: DecisionTreeClassifier
+  LinearSVC:
+    path: models/linearsvc.pkl
+    type: LinearSVC
+
+preprocessor:
+  path: models/preprocessor.pkl
+  features:
+    - pH
+    - Iron
+    - Nitrate
+    - Chloride
+    - Lead
+    - Zinc
+    - Turbidity
+    - Fluoride
+    - Copper
+    - Sulfate
+    - Conductivity
+    - Chlorine
+    - Total Dissolved Solids
+    - Water Temperature
+    - Air Temperature
+
+paths:
+  data:
+    raw: data/raw
+    processed: data/processed
+  models: models
+  reports: reports/model_performance
+
+api:
+  host: 0.0.0.0
+  port: 8000 

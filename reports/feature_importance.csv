@@ -1,0 +1,10 @@
+Feature,RandomForest,XGBoost,LightGBM,DecisionTree,LinearSVC
+ph,0.15,0.12,0.14,0.13,0.11
+Hardness,0.08,0.09,0.07,0.08,0.10
+Solids,0.12,0.11,0.13,0.12,0.09
+Chloramines,0.10,0.08,0.09,0.10,0.12
+Sulfate,0.09,0.10,0.08,0.09,0.08
+Conductivity,0.11,0.13,0.12,0.11,0.13
+Organic_carbon,0.13,0.14,0.11,0.14,0.14
+Trihalomethanes,0.14,0.15,0.15,0.15,0.15
+Turbidity,0.08,0.08,0.11,0.08,0.08 
